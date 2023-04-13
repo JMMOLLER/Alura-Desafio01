@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    background-color: #F3F5FC;
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+.container {
+    position: absolute;
+    margin: 40px 40px 40px calc(50% - 750px);
+    height: 92%;
+}
+.logo {
+    position: absolute;
+    left: 40px;
+    color: #0a3871;
+    margin: 0;
+    width: 120px;
+    height:48px
+}
+
+/* MIDDLE CONTAINER */
+
+.middleContainer {
+    position: absolute;
+    width: 680px;
+    height: 80.8%;
+    left: 240px;
+    top: 168px;
+}
+.inputarea {
+    height: 80%;
+}
+.inputText {
+    width: 100%;
+    height: 288px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0e468b;
+    background: none;
+    border: none;
+    resize: none;
+}
+.anotation {
+    width: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: 24px;
+}
+.icon {
+    background-color: #495057;
+    border-radius: 10px;
+}
+.labelAnotation {
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%; /* identical to box height, or 18px */ /* Gray/gray-400 */
+    color: #495057;
+    opacity: 0.8;
+}
+.buttons {
+    width: 93%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+}
+.encryptbtn {
+    box-sizing: border-box;
+    gap: 8px;
+    width: 50%;
+    height: 67px;
+    background: #0A3871;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: white;
+}
+.dencryptbtn {
+    box-sizing: border-box;
+    width: 50%;
+    height: 67px;
+    background: #d8dfe8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+}
+
+/*RIGTH CONTAINER*/
+
+.rigthContainer {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    left: 1000px;
+    background: #ffffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.firstStep{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20%;
+}
+.firstStep > img {
+    width: 350px;
+}
+.stepText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 24px;
+    height: 122px;
+    width: 336px;
+}
+.stepText > h3, .stepText > p {
+    margin: 0;
+}
