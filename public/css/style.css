@@ -8,6 +8,7 @@ body, html {
     height: 100%;
     width: 100%;
     min-width: 280px;
+    min-height: 450px;
 }
 main {
     height: 100%;
@@ -25,6 +26,7 @@ button {
 .logo {
     width: 100%;
     height: 7%;
+    min-height: 42.2px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -221,7 +223,7 @@ button {
 }
 @media (max-width: 425px) {
     .middleContainer {
-        height: calc(100% - 200px);
+        height: calc(100% - 100px);
     }
     .rigthContainer {
         height: 100%;
@@ -234,6 +236,9 @@ button {
     .contentTextRigth{
         padding: 0 10px;
         font-size: calc(10px + 2vmin);
+    }
+    .anotation {
+        padding: calc(5px + 1vmin) 0px;
     }
     .TextRigthTitle {
         align-items: flex-start;
@@ -250,6 +255,35 @@ button {
         width: 100% !important;
     }
     .inputarea {
-        height: calc(80% - 250px);
+        height: calc(100% - 150px);
+        padding: calc(20px + 2vmin) 0px;
+    }
+    .inputarea > textarea {
+        height: 100%;
+        font-size: calc(10px + 2vmin);
+    }
+}
+@media (max-width: 360px) or ((max-width: 800px)) {
+    .middleContainer {
+        height: 75%;
+    }
+    .rigthContainer {
+        height: 25%;
+        padding-top: 0px;
+    }
+    .inputarea {
+        padding: 20px 0px;
+        height: 50%;
+        box-sizing: border-box;
+    }
+    .contentRigth{
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .TextRigthTitle > h2 {
+        font-size: calc(10px + 2vmin);
+    }
+    .TextRigthComment > p {
+        font-size: calc(5px + 2vmin);
     }
 }
