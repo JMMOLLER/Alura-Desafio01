@@ -24,12 +24,12 @@
                         <label class="labelAnotation" for="inputText">Solo letras minúsculas y sin acentos</label>
                     </div>
                     <div class="buttons">
-                        <button type="button" class="encryptbtn">Encriptar</button>
-                        <button type="button" class="dencryptbtn">Desencriptar</button>
+                        <button type="button" class="encryptbtn" id="encrypt">Encriptar</button>
+                        <button type="button" class="dencryptbtn" id="decrypt">Desencriptar</button>
                     </div>
                 </div>
                 <div class="rigthContainer">
-                    <div class="contentRigth">
+                    <div class="noContentRigth">
                         <img src="public/images/Munieco.png" alt="image">
                         <div class="contentTextRigth">
                             <div class="TextRigthTitle">
@@ -38,6 +38,14 @@
                             <div class="TextRigthComment">
                                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="contentRigth">
+                        <div class="resultArea">
+                            <textarea class="resultText" name="resultText" id="resultText" disabled>payaso</textarea>
+                        </div>
+                        <div class="copyArea">
+                            <button class="copyBtn" id="copyBtn">Copiar</button>
                         </div>
                     </div>
                 </div>

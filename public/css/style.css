@@ -57,6 +57,7 @@ button {
     background: none;
     border: none;
     resize: none;
+    border-radius: 20px;
 }
 .inputText:focus {
     outline: none;
@@ -115,20 +116,58 @@ button {
 .rigthContainer {
     width: 400px;
     height: 100%;
-    padding: 0px 40px;
-}
-.contentRigth {
-    height: 100%;
+    padding: 40px;
     background: #ffffff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    position: relative;
+    box-sizing: border-box;
+}
+.contentRigth {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+}
+.resultArea {
+    height: 89%;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+}
+.resultText {
+    height: 100%;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0e468b;
+    background: none;
+    border: none;
+    resize: none;
+    border-radius: 20px;
+}
+.copyArea {
+    height: 11%;
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+.copyBtn {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    color: #0a3871;
+    background-color: transparent;
+}
+.noContentRigth {
+    display: none;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.contentRigth > img {
+.noContentRigth > img {
     width: 350px;
 }
 .contentTextRigth {
@@ -169,6 +208,17 @@ button {
 ::-webkit-scrollbar-thumb {
     background: #6e6e6e3f;
     border-radius: 10px;
+}
+
+/* KEYFRAMES */
+
+@keyframes error {
+    0% {
+        background-color: rgba(255, 0, 0, 0.37);
+    }
+    100% {
+        background-color: transparent;
+    }
 }
 
 /* MEDIA QUERIES */
@@ -212,7 +262,7 @@ button {
     .anotation {
         padding: 15px 0px;
     }
-    .contentRigth > img {
+    .noContentRigth > img {
         display: none;
     }
     .buttons {
@@ -229,7 +279,7 @@ button {
         height: 100%;
         padding-top: 0px;
     }
-    .contentRigth{
+    .noContentRigth{
         padding: 32px;
         box-sizing: border-box;
     }
@@ -279,7 +329,7 @@ button {
         height: 50%;
         box-sizing: border-box;
     }
-    .contentRigth{
+    .noContentRigth{
         height: 100%;
         box-sizing: border-box;
     }
