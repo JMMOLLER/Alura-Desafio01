@@ -46,7 +46,7 @@ window.onload = () => {
     }
 
     function validateCharacters(text) {
-        const regex = /[^a-z]/;
+        const regex = /[^a-z\s]/;
         return regex.test(text);
     }
 
