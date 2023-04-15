@@ -264,6 +264,9 @@ button {
     }
 }
 @media (max-width: 360px) or ((max-width: 800px)) {
+    body {
+        max-height: screen;
+    }
     .middleContainer {
         height: 75%;
     }
@@ -279,6 +282,17 @@ button {
     .contentRigth{
         height: 100%;
         box-sizing: border-box;
+    }
+    .buttons {
+        flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .encryptbtn{
+        width: 100%;
+    }
+    .dencryptbtn{
+        width: 100%;
     }
     .TextRigthTitle > h2 {
         font-size: calc(10px + 2vmin);
