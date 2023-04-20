@@ -4,6 +4,7 @@ window.onload = () => {
     const encryptBtn = document.getElementById("encrypt");  // obtenemos el eleento del DOM con el id encrypt
     const decryptBtn = document.getElementById("decrypt"); // obtenemos el eleento del DOM con el id decrypt
     const copyBtn = document.getElementById("copyBtn"); // obtenemos el eleento del DOM con el id copyBtn
+    const check = document.getElementById("check"); // obtenemos el eleento del DOM con el id check
     const clearTextArea = () => {
         if (input.value === "Ingrese el texto aquí") input.value = ""; // si el textarea tiene el texto de ejemplo, lo limpiamos
     };
@@ -67,7 +68,11 @@ window.onload = () => {
     async function copyToClipboard() {
         try {
             await navigator.clipboard.writeText(resultText.value); // copiar el texto
-            showValueContent(false); // ocultar el resultado
+            copyBtn.textContent = ""; // limpiamos el texto del botón
+            check.style.display = "block"; // mostramos el check
+            setTimeout(() => {
+                showValueContent(false); // ocultar el resultado
+            }, 1200); // esperamos 1s
         } catch (err) { // si hay un error, evitamos ocultar el resultado
             console.log(err); // si hay un error, lo mostramos en consola
             alert("Se generó un error al intentar copiar el texto"); // mostramos un mensaje de error
