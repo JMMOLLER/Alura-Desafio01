@@ -1,5 +1,5 @@
 window.onload = () => {
-    /* DECLARACIONES */
+    /* =============== DECLARACIONES =============== */
     let resultIsVisible = false; // retorna true si el resultado está visible
     const input = document.getElementById("inputText"); // obtenemos el eleento del DOM con el id inputText
     const resultText = document.getElementById("resultText"); // obtenemos el eleento del DOM con el id resultText
@@ -8,15 +8,7 @@ window.onload = () => {
     const copyBtn = document.getElementById("copyBtn"); // obtenemos el eleento del DOM con el id copyBtn
     const initial = document.getElementsByClassName("noContentRigth")[0]; // obtenemos el DOM que se muestra al inicio
     const result = document.getElementsByClassName("contentRigth")[0]; // obtenemos el DOM que se muestra como resultado
-    const delayFunction = () => {
-        return new Promise((resolve) => setTimeout(resolve, DURATION + 850));
-    }; // función que retorna una promesa que se resuelve después de el valor de DURATION + 500ms
-    const clearTextArea = () => {
-        if (input.value === "Ingrese el texto aquí") input.value = ""; // si el textarea tiene el texto de ejemplo, lo limpiamos
-    };
-    const setTextOnTextArea = () => {
-        if (input.value === "") input.value = "Ingrese el texto aquí"; // si el textarea está vacío, mostramos el texto de ejemplo
-    };
+    const delayFunction = () => {return new Promise((resolve) => setTimeout(resolve, DURATION + 850));}; // función que retorna una promesa que se resuelve después de 1s
     const DURATION = 150; // duración de la animación
     const keys = {
         e: "enter",
@@ -26,7 +18,7 @@ window.onload = () => {
         u: "ufat",
     }; // objeto con los valores de las vocales
 
-    /* FUNCIONES */
+    /* =============== FUNCIONES =============== */
 
     function encrypt() {
         if (validateCharacters(input.value)) return setAnimationError(); // si hay caracteres que no sean letras o espacios, mostramos la animación y retornamos
@@ -128,11 +120,9 @@ window.onload = () => {
         }
     }
 
-    /* EVENTOS */
+    /* =============== EVENTOS =============== */
 
     encryptBtn.onclick = encrypt;
     decryptBtn.onclick = decrypt;
-    input.onclick = clearTextArea;
-    input.onblur = setTextOnTextArea;
     copyBtn.onclick = copyToClipboard;
 };

@@ -60,6 +60,9 @@ button {
     resize: none;
     border-radius: 20px;
 }
+textarea::placeholder {
+    color: #0e468b;
+}
 .inputText:focus {
     outline: none;
     border: none;
@@ -166,7 +169,6 @@ button {
     color: white;
 }
 .noContentRigth {
-    display: none;
     height: 100%;
     display: flex;
     flex-direction: column;
