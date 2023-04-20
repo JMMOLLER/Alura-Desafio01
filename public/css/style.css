@@ -273,6 +273,22 @@ button {
         width: 100%;
         height: 15%;
     }
+    .contentRigth{
+        padding: 10px 24px;
+        box-sizing: border-box;
+    }
+    .resultArea{
+        height: 70%;
+    }
+    .resultText{
+        padding: 0px 24px;
+        font-size: calc(10px + 2vmin);
+        box-sizing: border-box;
+    }
+    .copyArea {
+        padding-top: 0px;
+        height: 100%;
+    }
 }
 @media (max-width: 425px) {
     .middleContainer {
@@ -317,9 +333,6 @@ button {
     }
 }
 @media (max-width: 360px) or ((max-width: 800px)) {
-    body {
-        max-height: screen;
-    }
     .middleContainer {
         height: 75%;
     }
