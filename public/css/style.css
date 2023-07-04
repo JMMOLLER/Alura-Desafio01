@@ -23,6 +23,7 @@ button {
     height: 100%;
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 .logo {
     width: 100%;
@@ -204,6 +205,21 @@ textarea::placeholder {
 }
 .TextRigthComment > p {
     margin: 0;
+}
+.small_footer__footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: -20px;
+    left: 0;
+    gap: 5px;
+    color: #495057d5;
+}
+.small_footer__footer a {
+    color: #495057d5;
+    text-decoration: underline;
+    font-weight: 600;
+    line-height: 150%;
 }
 
 /* SCROLL BAR */
